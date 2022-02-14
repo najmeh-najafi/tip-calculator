@@ -1,0 +1,211 @@
+/* -----------------------start reset styles --------------------*/
+html,
+body{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: inherit;
+}
+/* -----------------------end reset styles --------------------*/
+/* --------------------start custom styles--------------------- */
+.d-flex{
+    display: flex;
+}
+.w-100{
+    width: 100%;
+}
+input, 
+button{
+    border:0;
+    outline: 0;
+}
+::-webkit-input-placeholder{
+    color:#547878;
+}
+/* --------------------end custom styles--------------------- */
+/* ----------------------start main styles ------------------*/
+body{
+    font-family: "space-mono",sans-serif;
+    background-color: #C5E4E7;
+}
+.tip-calculator-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo-container{
+    display: table;
+    margin: 15vh auto 8vh;
+}
+.tip-calculator{
+    width: 920px;
+    height: 481px;
+    background-color: white;
+    margin: 0 auto 23vh;
+    border-radius: 25px;
+    padding: 32px;
+    justify-content: space-between;
+}
+/* inputs section */
+.tip-calculator__inputs{
+    width: 379px;
+}
+.row{
+    margin-bottom: 40px;
+    position: relative;
+}
+.field-lable{
+    text-transform: capitalize;
+    color: #5E7A7D;
+    margin-bottom: 6px;
+    display: table;
+}
+.alert{
+    position: absolute;
+    right: 0;
+    top:0;
+    color: #E17457;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.invalid{
+    border-color:#E17457  ;
+}
+.alert.special{
+    font-size: 14px;
+}
+.field{
+    height: 48px;
+ background-color: #F3F9FA;
+ border-radius: 5px;
+ color: #00474B;
+ font-size: 24px;
+ text-align: right;
+ border:2px solid transparent;
+ transition: all 0.3s ;
+}
+.field:hover,.field:focus{
+    border-color: #26C2AE;
+}
+.bill-field,.person-field{
+    width: 100%;
+    padding: 6px 17px;
+}
+.tip-field{
+    padding: 6px 12px;
+    text-transform: capitalize;
+}
+.bill-field-wrapper,
+.person-field-wrapper{
+    position: relative;
+}
+.bill-field-wrapper::before,
+.person-field-wrapper::before{
+    content: " ";
+    position: absolute;
+    display: inline-block;
+}
+.bill-field-wrapper::before{
+    background-image: url(../images/icon-dollar.svg);
+    width: 10px;
+    height: 16px;
+    top:16px;
+    left: 19px;
+}
+.person-field-wrapper::before{
+    background-image: url(../images/icon-person.svg);
+    width: 13px;
+    height: 16px;
+    top:16px;
+    left: 17px;
+}
+.tips-item-container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.tip-item{
+    max-width: 117px;
+    height: 48px;
+    flex:0 0 117px;
+    font-size: 24px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+.tip-button{
+    background-color: #00474B;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tip-button:hover{
+    background-color: #9FE8DF;
+    color: #00474B;
+}
+.tip-button.active{
+    background-color: #26C2AE;
+    color: #00474B;
+}
+
+/* result section */
+.tip-calculator__results{
+    width: 413px;
+    background-color: #00474B;
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.tip-calculator__results .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.result-title{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+}
+.result-sub-title{
+    font-size: 13px;
+    color: #7F9D9F;
+}
+.result-number-box{
+    font-size: 48px;
+    color: #26C2AE;
+}
+.result-number::before{
+    content: "$";
+}
+.reset-btn{
+    width: 100%;
+    height: 48px;
+    font-size: 20px;
+    color: #00474B;
+    background-color: #26C2AE;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: auto;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.reset-btn:disabled{
+    color: #00474B;
+    background-color:#0D686D ;
+}
+.reset-btn:enabled:hover{
+    background-color: #9FE8DF;
+}
+.invalid{
+    border-color:#E17457  ;
+}
+.invalid:hover,.invalid:focus{
+    border-color:#E17457  ;
+}

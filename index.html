@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- link font  -->
+  <link rel="stylesheet" href="styles/fonts.css">
+  <!-- link custom style -->
+  <link rel="stylesheet" href="styles/app.css">
+  <!-- link responsivation style -->
+  <link rel="stylesheet" href="styles/responsive.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+  <!-- script link -->
+   <script src="js/app.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="tip-calculator-section">
+    <div class="logo-container">
+      <img class="logo" src="images/logo.svg" alt="SPLT TTER">
+    </div>
+    <div class="tip-calculator d-flex">
+      <div class="tip-calculator__inputs">
+        <div class="row">
+          <label for="bill-field" class="field-lable">bill</label>
+          <span class="alert">Can't be zero</span>
+          <div class="bill-field-wrapper">
+            <input id="bill-field" class="field bill-field" placeholder="0">
+          </div>
+        </div>
+        <div class="row">
+          <label class="field-lable">select tip %</label>
+          <span class="alert special">Can't be zero</span>
+          <div class="tips-item-container">
+            <button class="tip-item tip-button">5%</button>
+            <button class="tip-item tip-button">10%</button>
+            <button class="tip-item tip-button">15%</button>
+            <button class="tip-item tip-button">25%</button>
+            <button class="tip-item tip-button">50%</button>
+            <input class="tip-item field tip-field" id="tip-field" placeholder="custom">
+          </div>
+        </div>
+        <div class="row">
+          <label for="person-field" class="field-lable">number of people</label>
+          <span class="alert ">Can't be zero</span>
+          <div class="person-field-wrapper">
+            <input class="field person-field" id="person-field" placeholder="0">
+          </div>
+        </div>
+      </div>
+      <div class="tip-calculator__results">
+        <div class="row">
+          <div class="result-title-box">
+             <p class="result-title">tip amount</p>
+             <small class="result-sub-title">/ person</small>
+          </div>
+          <div class="result-number-box">
+              <span class="result-number tip-amount">0.00</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="result-title-box">
+             <p class="result-title">total</p>
+             <small class="result-sub-title">/ person</small>
+          </div>
+          <div class="result-number-box">
+              <span class="result-number total">0.00</span>
+          </div>
+        </div>
+        <button class="reset-btn disabled" disabled>
+          reset
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Erfan Atar Zadeh</a>.
+    Coded by <a href="#">Najmeh Najafi</a>.
+  </div>
+</body>
+
+</html>

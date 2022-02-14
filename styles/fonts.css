@@ -1,0 +1,5 @@
+@font-face{
+    font-family: "space-mono";
+    src: url(../fonts/SpaceMono-Bold.ttf) format("truetype");
+    font-weight: bold;
+}
