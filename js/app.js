@@ -112,10 +112,10 @@ function calculateTip(bill,person,tip) {
     }
     if(tip===0){
          tipAmount=(0).toFixed(2);
-         total=(bill/person).toFixed(2);
+         total=withTwoDesimals(bill/person);
     }else{
-        tipAmount=((bill*(tip/100))/person).toFixed(2);
-        total=(((bill*(tip/100)+bill))/person).toFixed(2);
+        tipAmount=withTwoDesimals((bill*(tip/100))/person);
+        total=withTwoDesimals(((bill*(tip/100)+bill))/person);
     }
     tipAmountPerPerson.textContent=tipAmount;
     totalPerPerson.textContent=total;
@@ -136,4 +136,9 @@ function resetCalculate(){
     inputs.forEach(item=>{
         item.classList.remove("invalid")
     })
+}
+
+// the function to return number with 2 desimal number
+function withTwoDesimals(number){
+    return number.toString().match(/^-?\d+(?:\.\d{0,2})?/)[0];
 }
