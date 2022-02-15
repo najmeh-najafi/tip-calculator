@@ -1,17 +1,21 @@
 /* -----------------------start reset styles --------------------*/
 html,
 body{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 *{
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
     font-family: inherit;
 }
 /* -----------------------end reset styles --------------------*/
 /* --------------------start custom styles--------------------- */
 .d-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .w-100{
@@ -32,10 +36,19 @@ body{
     background-color: #C5E4E7;
 }
 .tip-calculator-section{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .logo-container{
     display: table;
@@ -48,7 +61,9 @@ body{
     margin: 0 auto 23vh;
     border-radius: 25px;
     padding: 32px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 /* inputs section */
 .tip-calculator__inputs{
@@ -71,6 +86,7 @@ body{
     color: #E17457;
     font-size: 16px;
     opacity: 0;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 .invalid{
@@ -87,6 +103,7 @@ body{
  font-size: 24px;
  text-align: right;
  border:2px solid transparent;
+ -webkit-transition: all 0.3s ;
  transition: all 0.3s ;
 }
 .field:hover,.field:focus{
@@ -126,14 +143,21 @@ body{
 }
 .tips-item-container{
     margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .tip-item{
     max-width: 117px;
     height: 48px;
-    flex:0 0 117px;
+    -webkit-box-flex:0;
+        -ms-flex:0 0 117px;
+            flex:0 0 117px;
     font-size: 24px;
     border-radius: 5px;
     margin-bottom: 16px;
@@ -142,6 +166,7 @@ body{
     background-color: #00474B;
     color: white;
     cursor: pointer;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -160,13 +185,24 @@ body{
     background-color: #00474B;
     border-radius: 15px;
     padding: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .tip-calculator__results .row{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .result-title{
     font-size: 16px;
@@ -193,6 +229,7 @@ body{
     text-transform: uppercase;
     border-radius: 5px;
     margin-top: auto;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     cursor: pointer;
 }

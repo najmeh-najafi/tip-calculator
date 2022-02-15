@@ -46,7 +46,10 @@
 @media only screen and (max-width:576px){
     .tip-calculator{
         max-width: 100%;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .tip-calculator__inputs{
         width: 100%;
